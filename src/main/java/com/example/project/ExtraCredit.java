@@ -1,7 +1,10 @@
+// This is the Extra Credit
+
 package com.example.project;
 import java.math.RoundingMode; // Rounding learned from: https://stackoverflow.com/questions/153724/how-to-round-a-number-to-n-decimal-places-in-java
 import java.text.DecimalFormat; // same as above
 import java.util.Scanner;
+// learned stringbuilder tp string from https://www.geeksforgeeks.org/stringbuilder-tostring-method-in-java-with-examples/
 
 
 public class ExtraCredit {
@@ -41,12 +44,12 @@ public class ExtraCredit {
         double cost = 1;
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter item or say 'X' to quit: ");
-        String items = scan.nextLine();
+        System.out.print("Enter item or say 'X' to quit: "); 
+        String items = scan.nextLine(); // I put the first item outside the list so "x" does not get appended to the string (1/2)
 
 
         while (!items.equals("X")) {
-            order.append(items + "\n");
+            order.append(items + "\n"); // The append is at the top of the list so "x" does not get appended to the string (2/2)
             System.out.print("Enter item or say 'X' to quit: ");
             items = scan.nextLine();
         }  
