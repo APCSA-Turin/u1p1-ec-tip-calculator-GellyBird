@@ -10,11 +10,12 @@ public class ExtraCredit {
         StringBuilder result = new StringBuilder();
 
         DecimalFormat df = new DecimalFormat("#.##"); 
-        double tip = cost * ((double)percent / 100);
-        double total = tip + cost;
-        double originalCostPerPerson = cost / people;
-        double tipPerPerson = tip / people;
-        double totalPerPerson = total / people; 
+        double tip = cost * ((double)percent / 100); // Multiples the cost of the food with the tip (whole number/100 to make it a decimal)
+        double total = tip + cost; // Adds the tip and food cost together
+        double originalCostPerPerson = cost / people; // divides the food cost prior to the tip by the number of people
+        double tipPerPerson = tip / people; // divides the tip cost by the number of people 
+        double totalPerPerson = total / people; // divides the cost with tip by the number of people
+
 
 
         result.append("-------------------------------\n");
@@ -41,7 +42,7 @@ public class ExtraCredit {
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter item or say 'X' to quit: ");
-        String items = "";
+        String items = scan.nextLine();
 
 
         while (!items.equals("X")) {
