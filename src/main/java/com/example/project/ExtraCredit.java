@@ -44,13 +44,13 @@ public class ExtraCredit {
         double cost = 1;
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter item or say 'X' to quit: "); 
+        System.out.print("Enter item or say 'x' to quit: "); 
         String items = scan.nextLine(); // I put the first item outside the list so "x" does not get appended to the string (1/2)
 
 
-        while (!items.equals("X")) {
+        while (!items.equals("x")) {
             order.append(items + "\n"); // The append is at the top of the list so "x" does not get appended to the string (2/2)
-            System.out.print("Enter item or say 'X' to quit: ");
+            System.out.print("Enter item or say 'x' to quit: ");
             items = scan.nextLine();
         }  
         System.out.println(calculateTip(people,percent,cost,order.toString()));              
